@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Obkladač Liberecký kraj | Ivo Strnad – obkladačské práce</title>
-    <meta name="description" content="Obkladačské a dlaždičské práce v Libereckém kraji. Koupelny, kuchyně, terasy. Ivo Strnad – obkladač Jablonec nad Nisou a okolí.">
+    <meta name="description" content="Obkladačské a dlaždičské práce v Libereckém kraji. Koupelny, kuchyně, terasy. 40 let praxe. Ivo Strnad – obkladač Jablonec nad Nisou.">
 
     <style>
         body {
@@ -20,6 +20,14 @@
             color: #fff;
             padding: 35px 15px;
             text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+        header p {
+            margin-top: 10px;
+            font-size: 18px;
         }
         .container {
             max-width: 900px;
@@ -38,16 +46,31 @@
             border-radius: 6px;
             cursor: pointer;
         }
+
+        /* PROFIL – 2 SLOUPCE */
         .profile {
             display: flex;
-            gap: 20px;
-            align-items: center;
-            flex-wrap: wrap;
+            gap: 30px;
+            align-items: flex-start;
         }
         .profile img {
-            max-width: 220px;
+            max-width: 260px;
+            flex-shrink: 0;
             cursor: default;
         }
+
+        /* CLAIM */
+        .claim {
+            display: inline-block;
+            background-color: #e6eef6;
+            color: #003366;
+            font-weight: bold;
+            padding: 8px 14px;
+            border-left: 5px solid #003366;
+            margin-bottom: 15px;
+        }
+
+        /* GALERIE */
         .gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -59,11 +82,11 @@
         .lightbox {
             display: none;
             position: fixed;
-            z-index: 999;
             inset: 0;
             background: rgba(0,0,0,0.85);
             justify-content: center;
             align-items: center;
+            z-index: 999;
         }
         .lightbox img {
             max-width: 90%;
@@ -86,6 +109,18 @@
             margin-top: 40px;
             font-size: 14px;
         }
+
+        /* MOBIL */
+        @media (max-width: 700px) {
+            .profile {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .profile img {
+                max-width: 220px;
+            }
+        }
     </style>
 </head>
 
@@ -101,12 +136,21 @@
 
     <section class="profile">
         <img src="ivo-strnad-obkladac.jpeg" alt="Ivo Strnad – obkladač Liberecký kraj">
-        <p>
-            Jsem <strong>obkladač s dlouholetou praxí</strong> a nabízím
-            <strong>obkladačské a dlaždičské práce v Libereckém kraji</strong>.
-            Specializuji se na realizace koupelen, kuchyní, WC, chodeb,
-            teras a dalších interiérů i exteriérů.
-        </p>
+
+        <div>
+            <div class="claim">
+                více než 40 let praxe
+            </div>
+
+            <p>
+                Jsem <strong>obkladač s dlouholetou praxí</strong> a nabízím
+                <strong>obkladačské a dlaždičské práce v Libereckém kraji</strong>.
+                Specializuji se na realizace koupelen, kuchyní, WC, chodeb,
+                teras a dalších interiérů i exteriérů.
+                Působím především v oblasti
+                <strong>Jablonce nad Nisou, Mšena nad Nisou a okolních měst</strong>.
+            </p>
+        </div>
     </section>
 
     <section>
@@ -123,9 +167,10 @@
     <section>
         <h2>Kde pracuji</h2>
         <p>
-            Pracuji v lokalitách <strong>Jablonec nad Nisou, Liberec,
-            Turnov, Tanvald a okolí</strong>. Po domluvě realizuji zakázky
-            v celém <strong>Libereckém kraji</strong>.
+            Obkladačské a dlaždičské práce provádím zejména v lokalitách
+            <strong>Jablonec nad Nisou, Liberec, Turnov, Tanvald a okolí</strong>.
+            Po domluvě realizuji zakázky v rámci celého
+            <strong>Libereckého kraje</strong>.
         </p>
     </section>
 
@@ -144,7 +189,7 @@
     &copy; 2025 Ivo Strnad – obkladačské práce | Liberecký kraj
 </footer>
 
-<!-- LIGHTBOX OBRÁZKY -->
+<!-- LIGHTBOX -->
 <div id="img1" class="lightbox"><a href="#"><img src="koupelna-1.jpeg"></a></div>
 <div id="img2" class="lightbox"><a href="#"><img src="koupelna-2.jpeg"></a></div>
 <div id="img3" class="lightbox"><a href="#"><img src="koupelna-3.jpeg"></a></div>
