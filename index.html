@@ -22,14 +22,6 @@
             padding: 35px 15px;
             text-align: center;
         }
-        header h1 {
-            margin: 0;
-            font-size: 32px;
-        }
-        header p {
-            margin-top: 10px;
-            font-size: 18px;
-        }
         .container {
             max-width: 900px;
             margin: 25px auto;
@@ -39,10 +31,27 @@
         }
         h2 {
             color: #003366;
-            margin-top: 30px;
+            margin-top: 35px;
         }
-        ul {
-            padding-left: 20px;
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+        }
+        .profile {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .profile img {
+            max-width: 220px;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
         }
         a {
             color: #003366;
@@ -69,7 +78,8 @@
 
 <div class="container">
 
-    <section>
+    <section class="profile">
+        <img src="ivo-strnad-obkladac.jpg" alt="Ivo Strnad – obkladač Liberecký kraj">
         <p>
             Jsem <strong>obkladač s dlouholetou praxí</strong> a nabízím
             <strong>obkladačské a dlaždičské práce v Libereckém kraji</strong>.
@@ -81,36 +91,19 @@
     </section>
 
     <section>
-        <h2>Spolehlivý obkladač v Libereckém kraji</h2>
+        <h2>Ukázka realizace – koupelna</h2>
         <p>
-            Jmenuji se Ivo Strnad a obkladačským pracím se věnuji řadu let.
-            Zakládám si na kvalitním řemeslném provedení, přesnosti
-            a dodržování domluvených termínů.
-            Realizuji zakázky pro soukromé osoby i firmy
-            v rámci celého <strong>Libereckého kraje</strong>.
+            Níže je ukázka jedné z realizovaných koupelen.
+            Provádím kompletní obkladačské práce včetně pokládky dlažby
+            v celém <strong>Libereckém kraji</strong>.
         </p>
-    </section>
 
-    <section>
-        <h2>Obkladačské a dlaždičské práce</h2>
-        <ul>
-            <li>obklady koupelen a WC</li>
-            <li>pokládka dlažby v interiéru</li>
-            <li>pokládka venkovní dlažby a teras</li>
-            <li>obklady kuchyní a technických místností</li>
-            <li>obkladačské práce pro byty i komerční prostory</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Kde pracuji</h2>
-        <p>
-            Obkladačské práce provádím zejména v těchto lokalitách:
-            <strong>Jablonec nad Nisou, Mšeno nad Nisou, Liberec,
-            Turnov, Tanvald a okolí</strong>.
-            Po domluvě realizuji zakázky v celém
-            <strong>Libereckém kraji</strong>.
-        </p>
+        <div class="gallery">
+            <img src="koupelna-1.jpg" alt="Realizace koupelny – obklady a dlažba">
+            <img src="koupelna-2.jpg" alt="Koupelna – detail obkladů">
+            <img src="koupelna-3.jpg" alt="Pokládka dlažby v koupelně">
+            <img src="koupelna-4.jpg" alt="Hotová koupelna – obkladačské práce">
+        </div>
     </section>
 
     <section>
