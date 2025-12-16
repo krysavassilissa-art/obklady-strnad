@@ -97,6 +97,44 @@
             display: flex;
         }
 
+        /* KONTAKTY */
+        .contact-box {
+            background-color: #f7f9fc;
+            border-left: 6px solid #003366;
+            padding: 25px;
+            margin-top: 35px;
+        }
+        .contact-item {
+            margin: 12px 0;
+            font-size: 18px;
+        }
+        .contact-item a {
+            font-weight: bold;
+            color: #003366;
+            text-decoration: none;
+        }
+        .contact-note {
+            margin-top: 15px;
+            font-style: italic;
+            color: #555;
+        }
+
+        /* TLAČÍTKO */
+        .call-button {
+            display: inline-block;
+            margin: 15px 0;
+            padding: 14px 26px;
+            background-color: #003366;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 6px;
+            text-decoration: none;
+        }
+        .call-button:hover {
+            background-color: #0055a5;
+        }
+
         a {
             color: #003366;
             text-decoration: none;
@@ -120,6 +158,11 @@
             .profile img {
                 max-width: 220px;
             }
+            .call-button {
+                display: block;
+                width: 100%;
+                text-align: center;
+            }
         }
     </style>
 </head>
@@ -139,7 +182,7 @@
 
         <div>
             <div class="claim">
-                více než 40 let praxe
+                40 let praxe v obkladačských pracích v Libereckém kraji
             </div>
 
             <p>
@@ -174,13 +217,33 @@
         </p>
     </section>
 
-    <section>
-        <h2>Kontakt – obkladač Liberecký kraj</h2>
+    <section class="contact-box">
+        <h2>Kontaktujte mě</h2>
+
         <p>
-            📍 Mozartova 3643/10, 466 04 Jablonec nad Nisou – Mšeno nad Nisou<br>
-            📞 <a href="tel:+420723145168">+420 723 145 168</a><br>
-            📧 <a href="mailto:ivostrnad@post.cz">ivostrnad@post.cz</a>
+            Máte zájem o obkladačské nebo dlaždičské práce?
+            Rád s vámi proberu vaši představu a domluvíme se na dalším postupu.
         </p>
+
+        <div class="contact-item">
+            📞 Telefon: <a href="tel:+420723145168">+420&nbsp;723&nbsp;145&nbsp;168</a>
+        </div>
+
+        <a class="call-button" href="tel:+420723145168">
+            Zavolat
+        </a>
+
+        <div class="contact-item">
+            📧 E-mail: <a href="mailto:ivostrnad@post.cz">ivostrnad@post.cz</a>
+        </div>
+
+        <div class="contact-item">
+            📍 Jablonec nad Nisou – Mšeno nad Nisou
+        </div>
+
+        <div class="contact-note">
+            Pokud telefon nezvednu, ozvu se zpět. Férový a lidský přístup je samozřejmostí.
+        </div>
     </section>
 
 </div>
