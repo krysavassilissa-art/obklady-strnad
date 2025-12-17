@@ -15,12 +15,12 @@
     --text: #333;
 }
 
-/* ZÁKLAD */
+/* základní */
 body {
     margin: 0;
     font-family: "Segoe UI", Roboto, Arial, sans-serif;
     color: var(--text);
-    background-color: var(--light);
+    background: var(--light);
     line-height: 1.7;
 }
 
@@ -34,66 +34,54 @@ h1, h2 {
     padding: 60px 20px;
 }
 
-/* HERO */
+/* hero */
 .hero {
     background:
         linear-gradient(rgba(31,58,95,0.75), rgba(31,58,95,0.75)),
         url('koupelna-1.jpeg') center/cover no-repeat;
-    color: white;
+    color: #fff;
     text-align: center;
-    padding: 120px 20px;
-    min-height: 60vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    padding: 100px 20px;
+}
 
-    
-    .hero h1 {
-    font-size: 40px;
-    margin-bottom: 15px;
-    color: #ffffff;
+.hero h1 {
+    font-size: 38px;
+    margin-bottom: 12px;
 }
 
 .hero p {
     font-size: 20px;
-    max-width: 760px;
-    margin: 0 auto 30px;
+    max-width: 700px;
+    margin: 0 auto 25px;
 }
 
 /* USP */
 .usp {
-    margin-bottom: 30px;
+    margin: 25px auto;
     display: flex;
     justify-content: center;
-    gap: 35px;
     flex-wrap: wrap;
+    gap: 30px;
     font-size: 18px;
 }
 
-.usp div {
-    white-space: nowrap;
-}
-
-/* HERO BUTTON */
+/* tlačítko */
 .hero a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--accent);
+    background: var(--accent);
     color: #000;
-    padding: 16px 34px;
-    border-radius: 40px;
+    padding: 14px 32px;
+    border-radius: 35px;
     font-size: 18px;
     font-weight: bold;
     text-decoration: none;
-    white-space: nowrap;
 }
 
-/* PROFIL */
+/* profil */
 .profile {
     display: grid;
     grid-template-columns: 260px 1fr;
-    gap: 40px;
+    gap: 35px;
+    align-items: start;
 }
 
 .profile img {
@@ -102,56 +90,57 @@ h1, h2 {
     cursor: pointer;
 }
 
-/* CLAIM */
+/* claim */
 .claim {
     display: inline-block;
-    background-color: var(--accent);
-    padding: 8px 16px;
+    background: var(--accent);
+    padding: 8px 14px;
     font-weight: bold;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 
-/* KARTY */
+/* služby */
 .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 22px;
+    margin-top: 15px;
 }
 
 .card {
     background: #fff;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    padding: 26px;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
 }
 
-/* GALERIE */
+/* galerie */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 18px;
+    margin-top: 18px;
 }
 
-.gallery img {
+.gallery a img {
     width: 100%;
-    border-radius: 12px;
-    cursor: pointer;
+    border-radius: 10px;
 }
 
-/* REFERENCE */
+/* reference */
 .references {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 25px;
-    margin-top: 30px;
+    gap: 22px;
+    margin-top: 25px;
 }
 
 .reference-box {
     background: #fff;
     border-left: 5px solid var(--accent);
-    padding: 25px 30px;
-    border-radius: 12px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    padding: 22px 26px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.06);
 }
 
 .reference-text {
@@ -159,78 +148,61 @@ h1, h2 {
 }
 
 .reference-author {
-    margin-top: 12px;
+    margin-top: 10px;
     font-weight: bold;
     color: var(--primary);
 }
 
-/* KONTAKT */
+/* kontakt */
 .contact {
-    background-color: var(--primary);
+    background: var(--primary);
     color: #fff;
     text-align: center;
-    padding: 80px 20px;
+    padding: 70px 20px;
 }
 
 .contact a.main-call {
     display: inline-block;
-    margin: 25px 0;
-    background-color: var(--accent);
+    margin: 22px 0;
+    background: var(--accent);
     color: #000;
-    padding: 16px 34px;
-    border-radius: 40px;
-    font-weight: bold;
+    padding: 14px 30px;
+    border-radius: 35px;
     text-decoration: none;
+    font-weight: bold;
 }
-
 .contact-details a {
     color: #fff;
     text-decoration: underline;
 }
 
-/* LIGHTBOX */
+/* lightbox – CSS-only */
 .lightbox {
     position: fixed;
     inset: 0;
     background: rgba(0,0,0,0.85);
     display: none;
-    justify-content: center;
     align-items: center;
-    z-index: 9999;
+    justify-content: center;
+    z-index: 999;
 }
-
-.lightbox.active {
+.lightbox:target {
     display: flex;
 }
-
 .lightbox img {
     max-width: 90%;
     max-height: 90%;
-    border-radius: 10px;
+    border-radius: 8px;
 }
 
-/* RESPONSIVE */
-@media (max-width: 800px) {
+/* responsive */
+@media (max-width: 780px) {
     .profile {
         grid-template-columns: 1fr;
         text-align: center;
     }
 }
-
-@media (max-width: 600px) {
-    .hero {
-        padding: 90px 20px;
-        min-height: 70vh;
-    }
-
-    .hero a {
-        width: 100%;
-        max-width: 320px;
-        font-size: 17px;
-    }
-}
 </style>
-</head>
 </head>
 
 <body>
@@ -243,27 +215,27 @@ h1, h2 {
         Precizní práce, férové jednání a spokojený zákazník.
     </p>
 
-    <a href="tel:+420723145168">📞 Zavolat pro nezávaznou domluvu</a>
-</section>
-
-
-<!-- O MNĚ -->
-<section class="container">
-    <div class="profile">
-        <img src="ivo-strnad-obkladac.jpeg" alt="Ivo Strnad – obkladač Liberecký kraj">
-        <div>
-            <div class="claim">30 let praxe</div>
-            <p>
-                Jmenuji se <strong>Ivo Strnad</strong> a obkladačským pracím se věnuji
-                více než 30 let. Každou zakázku provádím tak,
-                jako bych ji dělal pro sebe doma.
-            </p>
-                
     <div class="usp">
         <div>✔️ Dlouholetá praxe a zkušenosti</div>
         <div>✔️ Pečlivé provedení bez kompromisů</div>
         <div>✔️ Přímá domluva a férové ceny</div>
     </div>
+
+    <a href="tel:+420723145168">📞 Zavolat pro nezávaznou domluvu</a>
+</section>
+
+<!-- O MNĚ -->
+<section class="container">
+    <div class="profile">
+        <a href="#img-prof"><img src="ivo-strnad-obkladac.jpeg" alt="Ivo Strnad – obkladač"></a>
+        <div>
+            <div class="claim">30 let praxe</div>
+            <p>
+                Jmenuji se <strong>Ivo Strnad</strong> a obkladačským pracím se
+                věnuji více než <strong>30 let</strong>. Každou zakázku provádím
+                tak, jako bych ji dělal pro sebe doma. Pracuji samostatně, bez
+                prostředníků, nabízím férové ceny a přímou domluvu.
+            </p>
         </div>
     </div>
 </section>
@@ -275,6 +247,7 @@ h1, h2 {
         <div class="card">Obklady a dlažby koupelen</div>
         <div class="card">Obklady kuchyní a kuchyňských koutů</div>
         <div class="card">Pokládka dlažby (interiér i exteriér)</div>
+        <div class="card">Rekonstrukce koupelen</div>
         <div class="card">Opravy a drobné obkladačské práce</div>
         <div class="card">Poradenství při výběru materiálů</div>
     </div>
@@ -282,123 +255,94 @@ h1, h2 {
 
 <!-- GALERIE -->
 <section class="container">
-    <h2>Realizace moderní koupelny v Jablonci nad Nisou</h2>
-    <p>Ukázka moderní koupelny, kterou jsem v poslední době realizoval.</p>
+    <h2>Ukázka realizace moderní koupelny v Jablonci nad Nisou</h2>
+    <p>Ukázka jedné z koupelen, které jsem v poslední době realizoval.</p>
+
     <div class="gallery">
-        <img src="koupelna-1.jpeg" alt="Rekonstrukce koupelny – obklady">
-        <img src="koupelna-2.jpeg" alt="Detail obkladů v koupelně">
-        <img src="koupelna-3.jpeg" alt="Pokládka dlažby v koupelně">
+        <a href="#img1"><img src="koupelna-1.jpeg" alt="Rekonstrukce koupelny"></a>
+        <a href="#img2"><img src="koupelna-2.jpeg" alt="Detail obkladů"></a>
+        <a href="#img3"><img src="koupelna-3.jpeg" alt="Pokládka dlažby"></a>
+        <a href="#img4"><img src="koupelna-4.jpeg" alt="Hotová realizace"></a>
     </div>
 </section>
+
+<!-- DALŠÍ REALIZACE -->
 <section class="container">
     <h2>Další realizace a reference</h2>
 
-    <p>
-        Níže najdete výběr dalších realizovaných zakázek z poslední doby.
-        Jedná se o reálné práce u zákazníků – kuchyně, koupelny, WC
-        a sprchové kouty. U každé zakázky kladu důraz na detail,
-        přesné provedení a dlouhou životnost.
-    </p>
-
     <div class="gallery">
-        <img src="reference-2.jpg" alt="Detail obkladů v koupelně">
-        <img src="reference-3.jpg" alt="Obklady WC – detail provedení">
-        <img src="reference-5.jpg" alt="Sprchový kout – obklady a dlažba">
-        <img src="reference-1.jpg" alt="Detail obkladů v kuchyni – precizní provedení">
-        <img src="reference-4.jpg" alt="Obklady WC – hotová realizace">
-        <img src="koupelna-4.jpeg" alt="Hotová koupelna – obkladačské práce">
+        <a href="#ref1"><img src="reference-1.jpg" alt="Detail obkladů v kuchyni"></a>
+        <a href="#ref2"><img src="reference-2.jpg" alt="Detail obkladů v koupelně"></a>
+        <a href="#ref3"><img src="reference-3.jpg" alt="Obklady WC"></a>
+        <a href="#ref4"><img src="reference-4.jpg" alt="Obklady WC – realizace"></a>
+        <a href="#ref5"><img src="reference-5.jpg" alt="Sprchový kout"></a>
     </div>
 
-  <div class="references">
-
-    <div class="reference-box">
-        <div class="reference-text">
-            „Pečlivá práce, čisté provedení a příznivá cena.“
+    <div class="references">
+        <div class="reference-box">
+            <div class="reference-text">
+                „Pečlivá práce, čisté provedení a férová cena.“
+            </div>
+            <div class="reference-author">
+                – Jakub S., Jablonec nad Nisou
+            </div>
         </div>
-        <div class="reference-author">
-            – Jakub&nbsp;S., Jablonec nad Nisou
+        <div class="reference-box">
+            <div class="reference-text">
+                „S obklady v kuchyni jsme byli maximálně spokojeni.
+                Precizní práce a dodržený rozpočet.“
+            </div>
+            <div class="reference-author">
+                – Alena J., Bedřichov
+            </div>
         </div>
-    </div>
-
-    <div class="reference-box">
-        <div class="reference-text">
-            „S obklady v kuchyni jsme byli maximálně spokojeni.
-            Precizní práce a výborná domluva.“
-        </div>
-        <div class="reference-author">
-            – Alena&nbsp;J., Bedřichov
-        </div>
-    </div>
-
-    <div class="reference-box">
-        <div class="reference-text">
-            „Dlažba v chodbě je položená perfektně.
-            Vše proběhlo podle domluvy a v dohodnutém termínu.“
-        </div>
-        <div class="reference-author">
-            – Anna&nbsp;K., Bratříkov
+        <div class="reference-box">
+            <div class="reference-text">
+                „Dlažba v chodbě je položená perfektně.
+                Vše proběhlo podle domluvy a v dohodnutém termínu.“
+            </div>
+            <div class="reference-author">
+                – Anna K., Bratříkov
+            </div>
         </div>
     </div>
-
-</div>
-
-</div>
-
 </section>
 
+<!-- KDE PRACUJI -->
 <section class="container">
     <h2>Kde pracuji</h2>
-
     <p>
         Obkladačské a dlaždičské práce provádím především v
-        <strong>Libereckém kraji</strong>.
-        Nejčastěji pracuji v lokalitách
-        <strong>Jablonec nad Nisou, Liberec, Turnov, Tanvald a okolí</strong>. Po domluvě realizuji zakázky i v dalších městech až po Prahu.
+        <strong>Libereckém kraji</strong>. Nejčastěji pracuji v lokalitách
+        <strong>Jablonec nad Nisou, Liberec, Turnov, Tanvald a okolí</strong>.
+        Po domluvě realizuji zakázky i v dalších městech až po <strong>Prahu</strong>.
     </p>
 
-    <div style="margin-top: 30px; border-radius: 12px; overflow: hidden;">
-       <iframe
-    src="https://www.google.com/maps?q=Jablonec+nad+Nisou&z=8&output=embed"
-    width="100%"
-    height="380"
-    style="border:0;"
-    allowfullscreen=""
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade">
-</iframe>
-
+    <div style="margin-top:30px;border-radius:12px;overflow:hidden;">
+        <iframe
+            src="https://www.google.com/maps?q=Jablonec+nad+Nisou&z=8&output=embed"
+            width="100%"
+            height="380"
+            style="border:0;"
+            loading="lazy">
+        </iframe>
     </div>
 </section>
 
-
-    
 <!-- KONTAKT -->
 <section class="contact">
     <h2>Kontakt</h2>
-
     <p>
         Máte projekt? Potřebujete řešit obklady nebo dlažbu?<br>
-        Zavolejte mi nebo napište a rád proberu vaše představy
-        a připravím cenovou nabídku.
+        Zavolejte mi nebo napište a rád proberu vaše představy a cenovou nabídku.
     </p>
 
     <a class="main-call" href="tel:+420723145168">📞 Zavolat</a>
 
     <div class="contact-details">
-        <p>
-            📞 <strong>Telefon:</strong>
-            <a href="tel:+420723145168">+420&nbsp;723&nbsp;145&nbsp;168</a>
-        </p>
-
-        <p>
-            ✉️ <strong>E-mail:</strong>
-            <a href="mailto:ivostrnad@post.cz">ivostrnad@post.cz</a>
-        </p>
-
-        <p>
-            Pokud telefon nezvednu, ozvu se zpět.<br>
-            Férový a lidský přístup je pro mě samozřejmostí.
-        </p>
+        <p>📞 <strong>Telefon:</strong> <a href="tel:+420723145168">+420 723 145 168</a></p>
+        <p>✉️ <strong>E-mail:</strong> <a href="mailto:ivostrnad@post.cz">ivostrnad@post.cz</a></p>
+        <p>Pokud telefon nezvednu, ozvu se zpět. Férový a lidský přístup je pro mě samozřejmostí.</p>
     </div>
 </section>
 
@@ -407,74 +351,16 @@ h1, h2 {
 </footer>
 
 <!-- LIGHTBOX -->
-<div class="lightbox" id="lightbox">
-    <img src="" alt="">
-</div>
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-
-    const lightbox = document.getElementById("lightbox");
-    const lightboxImg = lightbox.querySelector("img");
-
-    // vybereme VŠECHNY obrázky, které mají mít lightbox
-    const images = document.querySelectorAll(
-        ".gallery img, .profile img"
-    );
-
-    images.forEach(function (img) {
-        img.addEventListener("click", function () {
-            lightboxImg.src = img.src;
-            lightbox.classList.add("active");
-        });
-    });
-
-    // zavření klikem kamkoliv
-    lightbox.addEventListener("click", function () {
-        lightbox.classList.remove("active");
-        lightboxImg.src = "";
-    });
-
-    // zavření klávesou ESC
-    document.addEventListener("keydown", function (e) {
-        if (e.key === "Escape") {
-            lightbox.classList.remove("active");
-            lightboxImg.src = "";
-        }
-    });
-
-});
-</script>
-
+<div id="img-prof" class="lightbox"><a href="#"><img src="ivo-strnad-obkladac.jpeg"></a></div>
+<div id="img1" class="lightbox"><a href="#"><img src="koupelna-1.jpeg"></a></div>
+<div id="img2" class="lightbox"><a href="#"><img src="koupelna-2.jpeg"></a></div>
+<div id="img3" class="lightbox"><a href="#"><img src="koupelna-3.jpeg"></a></div>
+<div id="img4" class="lightbox"><a href="#"><img src="koupelna-4.jpeg"></a></div>
+<div id="ref1" class="lightbox"><a href="#"><img src="reference-1.jpg"></a></div>
+<div id="ref2" class="lightbox"><a href="#"><img src="reference-2.jpg"></a></div>
+<div id="ref3" class="lightbox"><a href="#"><img src="reference-3.jpg"></a></div>
+<div id="ref4" class="lightbox"><a href="#"><img src="reference-4.jpg"></a></div>
+<div id="ref5" class="lightbox"><a href="#"><img src="reference-5.jpg"></a></div>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
