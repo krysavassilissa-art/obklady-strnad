@@ -111,26 +111,32 @@ h1, h2 {
     width: 100%;
     border-radius: 12px;
 }
-.reference-box {
+.references {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
     margin-top: 30px;
+}
+
+.reference-box {
     background-color: #ffffff;
     border-left: 5px solid var(--accent);
     padding: 25px 30px;
-    border-radius: 10px;
+    border-radius: 12px;
     box-shadow: 0 6px 18px rgba(0,0,0,0.06);
-    max-width: 800px;
 }
 
-.reference-box p {
-    margin: 0;
+.reference-text {
     font-style: italic;
-    font-size: 18px;
+    font-size: 17px;
+    line-height: 1.6;
 }
 
 .reference-author {
-    margin-top: 12px;
+    margin-top: 14px;
     font-weight: bold;
     color: var(--primary);
+    font-size: 15px;
 }
 
 /* KONTAKT */
@@ -262,13 +268,39 @@ footer {
         <img src="reference-5.jpg" alt="Sprchový kout – obklady a dlažba">
     </div>
 
-   <div class="reference-box">
-    <p>
-        „Pečlivá práce, čisté provedení a férová domluva.“
-    </p>
-    <div class="reference-author">
-        – Jakub S. z Jablonce nad Nisou
+  <div class="references">
+
+    <div class="reference-box">
+        <div class="reference-text">
+            „Pečlivá práce, čisté provedení a férová domluva.“
+        </div>
+        <div class="reference-author">
+            – Jakub&nbsp;S., Jablonec nad Nisou
+        </div>
     </div>
+
+    <div class="reference-box">
+        <div class="reference-text">
+            „S obklady v kuchyni jsme byli maximálně spokojeni.
+            Precizní práce a výborná domluva.“
+        </div>
+        <div class="reference-author">
+            – Alena&nbsp;J., Bedřichov
+        </div>
+    </div>
+
+    <div class="reference-box">
+        <div class="reference-text">
+            „Dlažba v chodbě je položená perfektně.
+            Vše proběhlo podle domluvy a v domluveném termínu.“
+        </div>
+        <div class="reference-author">
+            – Anna&nbsp;K., Bratříkov
+        </div>
+    </div>
+
+</div>
+
 </div>
 
 </section>
@@ -335,6 +367,7 @@ footer {
 
 </body>
 </html>
+
 
 
 
