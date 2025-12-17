@@ -111,6 +111,27 @@ h1, h2 {
     width: 100%;
     border-radius: 12px;
 }
+.reference-box {
+    margin-top: 30px;
+    background-color: #ffffff;
+    border-left: 5px solid var(--accent);
+    padding: 25px 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    max-width: 800px;
+}
+
+.reference-box p {
+    margin: 0;
+    font-style: italic;
+    font-size: 18px;
+}
+
+.reference-author {
+    margin-top: 12px;
+    font-weight: bold;
+    color: var(--primary);
+}
 
 /* KONTAKT */
 .contact {
@@ -241,10 +262,15 @@ footer {
         <img src="reference-5.jpg" alt="Sprchový kout – obklady a dlažba">
     </div>
 
-    <p style="margin-top:20px; font-style:italic;">
+   <div class="reference-box">
+    <p>
         „Pečlivá práce, čisté provedení a férová domluva.“
-        – Jakub S. z Jablonce nad Nisou
     </p>
+    <div class="reference-author">
+        – zákazník z Libereckého kraje
+    </div>
+</div>
+
 </section>
 
 <section class="container">
@@ -309,6 +335,7 @@ footer {
 
 </body>
 </html>
+
 
 
 
