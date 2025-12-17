@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Obkladač Liberecký kraj | Ivo Strnad – obkladačské práce</title>
-<meta name="description" content="Profesionální obkladačské práce v Libereckém kraji. 40 let praxe, koupelny, kuchyně, dlažba. Ivo Strnad – Jablonec nad Nisou.">
+<meta name="description" content="Profesionální obkladačské práce v Libereckém kraji. 30 let praxe, koupelny, kuchyně, dlažba. Ivo Strnad – Jablonec nad Nisou.">
 
 <style>
 :root {
@@ -15,6 +15,7 @@
     --text: #333;
 }
 
+/* ZÁKLAD */
 body {
     margin: 0;
     font-family: "Segoe UI", Roboto, Arial, sans-serif;
@@ -25,7 +26,6 @@ body {
 
 h1, h2 {
     color: var(--primary);
-    line-height: 1.3;
 }
 
 .container {
@@ -36,24 +36,44 @@ h1, h2 {
 
 /* HERO */
 .hero {
-    background: linear-gradient(rgba(31,58,95,0.85), rgba(31,58,95,0.85)),
-                url('koupelna-1.jpeg') center/cover no-repeat;
-    color: white;
+    background:
+        linear-gradient(rgba(31,58,95,0.75), rgba(31,58,95,0.75)),
+        url('koupelna-4.jpeg') center/cover no-repeat;
+    color: #fff;
     text-align: center;
-    padding: 100px 20px;
+    padding: 120px 20px;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .hero h1 {
     font-size: 40px;
-    color: white;
+    margin-bottom: 15px;
 }
 
 .hero p {
     font-size: 20px;
-    max-width: 750px;
-    margin: 20px auto 35px;
+    max-width: 760px;
+    margin: 0 auto 30px;
 }
 
+/* USP */
+.usp {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    flex-wrap: wrap;
+    font-size: 18px;
+}
+
+.usp div {
+    white-space: nowrap;
+}
+
+/* HERO BUTTON */
 .hero a {
     display: inline-flex;
     align-items: center;
@@ -68,31 +88,29 @@ h1, h2 {
     white-space: nowrap;
 }
 
-}
-
 /* PROFIL */
 .profile {
     display: grid;
     grid-template-columns: 260px 1fr;
     gap: 40px;
-    align-items: start;
 }
 
 .profile img {
     width: 100%;
     border-radius: 12px;
+    cursor: pointer;
 }
 
+/* CLAIM */
 .claim {
     display: inline-block;
     background-color: var(--accent);
-    color: #000;
     padding: 8px 16px;
     font-weight: bold;
     margin-bottom: 15px;
 }
 
-/* SLUŽBY */
+/* KARTY */
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -100,7 +118,7 @@ h1, h2 {
 }
 
 .card {
-    background: white;
+    background: #fff;
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.06);
@@ -109,14 +127,17 @@ h1, h2 {
 /* GALERIE */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 20px;
 }
 
 .gallery img {
     width: 100%;
     border-radius: 12px;
+    cursor: pointer;
 }
+
+/* REFERENCE */
 .references {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -125,7 +146,7 @@ h1, h2 {
 }
 
 .reference-box {
-    background-color: #ffffff;
+    background: #fff;
     border-left: 5px solid var(--accent);
     padding: 25px 30px;
     border-radius: 12px;
@@ -134,46 +155,31 @@ h1, h2 {
 
 .reference-text {
     font-style: italic;
-    font-size: 17px;
-    line-height: 1.6;
 }
 
 .reference-author {
-    margin-top: 14px;
+    margin-top: 12px;
     font-weight: bold;
     color: var(--primary);
-    font-size: 15px;
 }
 
 /* KONTAKT */
 .contact {
     background-color: var(--primary);
-    color: white;
+    color: #fff;
     text-align: center;
     padding: 80px 20px;
 }
 
-.contact h2 {
-    color: white;
-}
-
 .contact a.main-call {
     display: inline-block;
-    margin: 25px 0 35px;
+    margin: 25px 0;
     background-color: var(--accent);
     color: #000;
     padding: 16px 34px;
     border-radius: 40px;
-    font-size: 18px;
     font-weight: bold;
     text-decoration: none;
-}
-
-.contact-details {
-    max-width: 600px;
-    margin: 0 auto;
-    font-size: 18px;
-    line-height: 1.8;
 }
 
 .contact-details a {
@@ -181,12 +187,25 @@ h1, h2 {
     text-decoration: underline;
 }
 
-/* FOOTER */
-footer {
-    background-color: #12263f;
-    color: #ccc;
-    text-align: center;
-    padding: 20px;
+/* LIGHTBOX */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
 }
 
 /* RESPONSIVE */
@@ -196,17 +215,21 @@ footer {
         text-align: center;
     }
 }
-</style>
-    @media (max-width: 600px) {
+
+@media (max-width: 600px) {
+    .hero {
+        padding: 90px 20px;
+        min-height: 70vh;
+    }
+
     .hero a {
         width: 100%;
         max-width: 320px;
-        padding: 16px 20px;
         font-size: 17px;
-        border-radius: 30px;
     }
 }
-
+</style>
+</head>
 </head>
 
 <body>
@@ -384,6 +407,7 @@ footer {
 
 </body>
 </html>
+
 
 
 
