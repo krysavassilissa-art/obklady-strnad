@@ -405,8 +405,38 @@ h1, h2 {
     &copy; 2025 Ivo Strnad – obkladačské práce | Liberecký kraj
 </footer>
 
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+    <img src="" alt="">
+</div>
+
+<script>
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = lightbox.querySelector('img');
+
+document.querySelectorAll('.lightbox-trigger').forEach(img => {
+    img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightbox.classList.add('active');
+    });
+});
+
+lightbox.addEventListener('click', () => {
+    lightbox.classList.remove('active');
+    lightboxImg.src = '';
+});
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        lightbox.classList.remove('active');
+        lightboxImg.src = '';
+    }
+});
+</script>
+
 </body>
 </html>
+
 
 
 
