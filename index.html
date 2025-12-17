@@ -50,7 +50,7 @@ h1, h2 {
 
 .hero p {
     font-size: 20px;
-    max-width: 700px;
+    max-width: 750px;
     margin: 20px auto 35px;
 }
 
@@ -86,7 +86,7 @@ h1, h2 {
     margin-bottom: 15px;
 }
 
-/* KARTY */
+/* SLUŽBY */
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -110,7 +110,6 @@ h1, h2 {
 .gallery img {
     width: 100%;
     border-radius: 12px;
-    cursor: pointer;
 }
 
 /* KONTAKT */
@@ -118,12 +117,16 @@ h1, h2 {
     background-color: var(--primary);
     color: white;
     text-align: center;
-    padding: 70px 20px;
+    padding: 80px 20px;
 }
 
-.contact a {
+.contact h2 {
+    color: white;
+}
+
+.contact a.main-call {
     display: inline-block;
-    margin-top: 20px;
+    margin: 25px 0 35px;
     background-color: var(--accent);
     color: #000;
     padding: 16px 34px;
@@ -131,6 +134,18 @@ h1, h2 {
     font-size: 18px;
     font-weight: bold;
     text-decoration: none;
+}
+
+.contact-details {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.contact-details a {
+    color: #fff;
+    text-decoration: underline;
 }
 
 /* FOOTER */
@@ -153,15 +168,17 @@ footer {
 
 <body>
 
+<!-- HERO -->
 <section class="hero">
     <h1>Profesionální obkladačské práce</h1>
     <p>
-        Více než 40 let zkušeností s obklady a dlažbou.
+        Více než 40 let zkušeností s obklady a dlažbou.<br>
         Precizní práce, férové jednání a spokojený zákazník.
     </p>
     <a href="tel:+420723145168">📞 Zavolat pro nezávaznou domluvu</a>
 </section>
 
+<!-- O MNĚ -->
 <section class="container">
     <div class="profile">
         <img src="ivo-strnad-obkladac.jpeg" alt="Ivo Strnad – obkladač Liberecký kraj">
@@ -180,31 +197,62 @@ footer {
     </div>
 </section>
 
+<!-- SLUŽBY -->
 <section class="container">
     <h2>Co nabízím</h2>
     <div class="cards">
         <div class="card">Obklady a dlažby koupelen</div>
-        <div class="card">Pokládka dlažby interiér / exteriér</div>
+        <div class="card">Obklady kuchyní a kuchyňských koutů</div>
+        <div class="card">Pokládka dlažby (interiér i exteriér)</div>
         <div class="card">Rekonstrukce koupelen</div>
-        <div class="card">Opravy a drobné práce</div>
+        <div class="card">Opravy a drobné obkladačské práce</div>
+        <div class="card">Poradenství při výběru materiálů</div>
     </div>
 </section>
 
+<!-- GALERIE -->
 <section class="container">
     <h2>Ukázka realizace</h2>
     <p>Ukázka jedné z koupelen, které jsem v poslední době realizoval.</p>
     <div class="gallery">
-        <img src="koupelna-1.jpeg">
-        <img src="koupelna-2.jpeg">
-        <img src="koupelna-3.jpeg">
-        <img src="koupelna-4.jpeg">
+        <img src="koupelna-1.jpeg" alt="Rekonstrukce koupelny – obklady">
+        <img src="koupelna-2.jpeg" alt="Detail obkladů v koupelně">
+        <img src="koupelna-3.jpeg" alt="Pokládka dlažby v koupelně">
+        <img src="koupelna-4.jpeg" alt="Hotová koupelna – obkladačské práce">
     </div>
 </section>
 
+<!-- KONTAKT -->
 <section class="contact">
-    <h2>Máte zájem o spolupráci?</h2>
-    <p>Rád se s vámi nezávazně domluvím.</p>
-    <a href="tel:+420723145168">📞 Zavolat</a>
+    <h2>Kontakt</h2>
+    <p>
+        Máte zájem o obkladačské práce nebo rekonstrukci koupelny?<br>
+        Ozvěte se – rád se s vámi nezávazně domluvím.
+    </p>
+
+    <a class="main-call" href="tel:+420723145168">📞 Zavolat</a>
+
+    <div class="contact-details">
+        <p>
+            📞 <strong>Telefon:</strong>
+            <a href="tel:+420723145168">+420&nbsp;723&nbsp;145&nbsp;168</a>
+        </p>
+
+        <p>
+            ✉️ <strong>E-mail:</strong>
+            <a href="mailto:ivostrnad@post.cz">ivostrnad@post.cz</a>
+        </p>
+
+        <p>
+            📍 <strong>Adresa:</strong><br>
+            Mozartova 3643/10<br>
+            466&nbsp;04 Jablonec nad Nisou – Mšeno nad Nisou
+        </p>
+
+        <p>
+            Působím v <strong>Libereckém kraji a okolí</strong>.
+        </p>
+    </div>
 </section>
 
 <footer>
