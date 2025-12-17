@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Obkladač Liberecký kraj | Ivo Strnad – obkladačské práce</title>
-    <meta name="description" content="Obkladačské a dlaždičské práce v Libereckém kraji. Koupelny, kuchyně, terasy. 40 let praxe. Ivo Strnad – obkladač Jablonec nad Nisou.">
+    <meta name="description" content="Profesionální obkladačské práce v Libereckém kraji. Více než 40 let praxe, koupelny, kuchyně, dlažba. Ivo Strnad – Jablonec nad Nisou.">
 
     <style>
         body {
@@ -18,17 +18,28 @@
         header {
             background-color: #003366;
             color: #fff;
-            padding: 35px 15px;
+            padding: 45px 20px;
             text-align: center;
         }
         header h1 {
             margin: 0;
-            font-size: 32px;
+            font-size: 34px;
         }
         header p {
-            margin-top: 10px;
-            font-size: 18px;
+            margin: 15px 0 25px;
+            font-size: 19px;
         }
+        .hero-button {
+            display: inline-block;
+            background-color: #fff;
+            color: #003366;
+            padding: 14px 26px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 6px;
+            text-decoration: none;
+        }
+
         .container {
             max-width: 900px;
             margin: 25px auto;
@@ -36,18 +47,13 @@
             padding: 30px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
+
         h2 {
             color: #003366;
-            margin-top: 35px;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 6px;
-            cursor: pointer;
+            margin-top: 40px;
         }
 
-        /* PROFIL – 2 SLOUPCE */
+        /* PROFIL */
         .profile {
             display: flex;
             gap: 30px;
@@ -55,19 +61,22 @@
         }
         .profile img {
             max-width: 260px;
-            flex-shrink: 0;
-            cursor: default;
+            border-radius: 6px;
         }
 
-        /* CLAIM */
         .claim {
-            display: inline-block;
             background-color: #e6eef6;
             color: #003366;
             font-weight: bold;
             padding: 8px 14px;
             border-left: 5px solid #003366;
             margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        /* SLUŽBY */
+        ul {
+            padding-left: 20px;
         }
 
         /* GALERIE */
@@ -77,193 +86,7 @@
             gap: 15px;
             margin-top: 15px;
         }
-
-        /* LIGHTBOX */
-        .lightbox {
-            display: none;
-            position: fixed;
-            inset: 0;
-            background: rgba(0,0,0,0.85);
-            justify-content: center;
-            align-items: center;
-            z-index: 999;
-        }
-        .lightbox img {
-            max-width: 90%;
-            max-height: 90%;
-            box-shadow: 0 0 20px #000;
-        }
-        .lightbox:target {
-            display: flex;
-        }
-
-        /* KONTAKTY */
-        .contact-box {
-            background-color: #f7f9fc;
-            border-left: 6px solid #003366;
-            padding: 25px;
-            margin-top: 35px;
-        }
-        .contact-item {
-            margin: 12px 0;
-            font-size: 18px;
-        }
-        .contact-item a {
-            font-weight: bold;
-            color: #003366;
-            text-decoration: none;
-        }
-        .contact-note {
-            margin-top: 15px;
-            font-style: italic;
-            color: #555;
-        }
-
-        /* TLAČÍTKO */
-        .call-button {
-            display: inline-block;
-            margin: 15px 0;
-            padding: 14px 26px;
-            background-color: #003366;
-            color: #fff;
-            font-size: 18px;
-            font-weight: bold;
+        img {
+            max-width: 100%;
             border-radius: 6px;
-            text-decoration: none;
-        }
-        .call-button:hover {
-            background-color: #0055a5;
-        }
-
-        a {
-            color: #003366;
-            text-decoration: none;
-        }
-        footer {
-            background-color: #003366;
-            color: #fff;
-            text-align: center;
-            padding: 15px;
-            margin-top: 40px;
-            font-size: 14px;
-        }
-
-        /* MOBIL */
-        @media (max-width: 700px) {
-            .profile {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-            .profile img {
-                max-width: 220px;
-            }
-            .call-button {
-                display: block;
-                width: 100%;
-                text-align: center;
-            }
-        }
-    </style>
-</head>
-
-<body>
-
-<header>
-    <h1>Obkladačské práce – Liberecký kraj</h1>
-    <p>Ivo Strnad – obkladač a dlaždič<br>
-    Jablonec nad Nisou a okolí</p>
-</header>
-
-<div class="container">
-
-    <section class="profile">
-        <img src="ivo-strnad-obkladac.jpeg" alt="Ivo Strnad – obkladač Liberecký kraj">
-
-        <div>
-            <div class="claim">
-                40 let praxe v obkladačských pracích v Libereckém kraji
-            </div>
-
-            <p>
-                Jsem <strong>obkladač s dlouholetou praxí</strong> a nabízím
-                <strong>obkladačské a dlaždičské práce v Libereckém kraji</strong>.
-                Specializuji se na realizace koupelen, kuchyní, WC, chodeb,
-                teras a dalších interiérů i exteriérů.
-                Působím především v 
-                <strong>Jablonci nad Nisou a okolí</strong>.
-            </p>
-        </div>
-    </section>
-
-    <section>
-        <h2>Ukázka realizace – koupelna</h2>
-<p>Ukázka jedné z koupelen, které jsem v poslední době realizoval.</p>
-
-        <div class="gallery">
-            <a href="#img1"><img src="koupelna-1.jpeg" alt="Realizace koupelny – obklady a dlažba"></a>
-            <a href="#img2"><img src="koupelna-2.jpeg" alt="Detail obkladů v koupelně"></a>
-            <a href="#img3"><img src="koupelna-3.jpeg" alt="Pokládka dlažby v koupelně"></a>
-            <a href="#img4"><img src="koupelna-4.jpeg" alt="Hotová koupelna – obkladačské práce"></a>
-        </div>
-    </section>
-
-    <section>
-        <h2>Kde pracuji</h2>
-   <p>
-    Obkladačské a dlaždičské práce provádím především v
-    <strong>Libereckém kraji</strong> – zejména v lokalitách
-    <strong>Jablonec nad Nisou, Liberec, Turnov a okolí</strong>.
-    Po domluvě realizuji zakázky také ve
-    <strong>Středočeském kraji a Praze</strong>,
-    například v oblastech
-    <strong>Mladá Boleslav, Mnichovo Hradiště</strong> a dalších městech.
-</p>
-
-    </section>
-
-    <section class="contact-box">
-        <h2>Kontaktujte mě</h2>
-
-        <p>
-            Máte zájem o obkladačské nebo dlaždičské práce?
-            Rád s vámi proberu vaši představu a domluvíme se na dalším postupu.
-        </p>
-
-        <div class="contact-item">
-            📞 Telefon: <a href="tel:+420723145168">+420&nbsp;723&nbsp;145&nbsp;168</a>
-        </div>
-
-        <div class="contact-item">
-            📧 E-mail: <a href="mailto:ivostrnad@post.cz">ivostrnad@post.cz</a>
-        </div>
-
-        <div class="contact-item">
-            📍 Jablonec nad Nisou – Mšeno nad Nisou
-        </div>
-
-        <div class="contact-note">
-            Pokud telefon nezvednu, ozvu se zpět. Férový a lidský přístup je samozřejmostí.
-        </div>
-    </section>
-
-</div>
-
-<footer>
-    &copy; 2025 Ivo Strnad – obkladačské práce | Liberecký kraj
-</footer>
-
-<!-- LIGHTBOX -->
-<div id="img1" class="lightbox"><a href="#"><img src="koupelna-1.jpeg"></a></div>
-<div id="img2" class="lightbox"><a href="#"><img src="koupelna-2.jpeg"></a></div>
-<div id="img3" class="lightbox"><a href="#"><img src="koupelna-3.jpeg"></a></div>
-<div id="img4" class="lightbox"><a href="#"><img src="koupelna-4.jpeg"></a></div>
-
-</body>
-</html>
-
-
-
-
-
-
+            cursor: pointer;
