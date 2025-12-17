@@ -412,31 +412,44 @@ h1, h2 {
 </div>
 
 <script>
-const lightbox = document.getElementById('lightbox');
-const lightboxImg = lightbox.querySelector('img');
+document.addEventListener("DOMContentLoaded", function () {
 
-document.querySelectorAll('.lightbox-trigger').forEach(img => {
-    img.addEventListener('click', () => {
-        lightboxImg.src = img.src;
-        lightbox.classList.add('active');
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = lightbox.querySelector("img");
+
+    // vybereme VŠECHNY obrázky, které mají mít lightbox
+    const images = document.querySelectorAll(
+        ".gallery img, .profile img"
+    );
+
+    images.forEach(function (img) {
+        img.addEventListener("click", function () {
+            lightboxImg.src = img.src;
+            lightbox.classList.add("active");
+        });
     });
-});
 
-lightbox.addEventListener('click', () => {
-    lightbox.classList.remove('active');
-    lightboxImg.src = '';
-});
+    // zavření klikem kamkoliv
+    lightbox.addEventListener("click", function () {
+        lightbox.classList.remove("active");
+        lightboxImg.src = "";
+    });
 
-document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-        lightbox.classList.remove('active');
-        lightboxImg.src = '';
-    }
+    // zavření klávesou ESC
+    document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+            lightbox.classList.remove("active");
+            lightboxImg.src = "";
+        }
+    });
+
 });
 </script>
 
+
 </body>
 </html>
+
 
 
 
