@@ -123,9 +123,10 @@ h1, h2 {
     margin-top: 18px;
 }
 
-.gallery a img {
+.gallery img {
     width: 100%;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 /* reference */
@@ -172,28 +173,49 @@ h1, h2 {
     text-decoration: none;
     font-weight: bold;
 }
+
 .contact-details a {
     color: #fff;
     text-decoration: underline;
 }
 
-/* lightbox – CSS-only */
+/* LIGHTBOX */
 .lightbox {
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.85);
+    background: rgba(0,0,0,0.9);
     display: none;
-    align-items: center;
     justify-content: center;
-    z-index: 999;
+    align-items: center;
+    z-index: 9999;
 }
-.lightbox:target {
+
+.lightbox.active {
     display: flex;
 }
+
 .lightbox img {
     max-width: 90%;
-    max-height: 90%;
-    border-radius: 8px;
+    max-height: 85%;
+    border-radius: 10px;
+}
+
+/* šipky */
+.lightbox-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+}
+
+.lightbox-arrow.left { left: 20px; }
+.lightbox-arrow.right { right: 20px; }
+
+.lightbox-arrow:hover {
+    color: var(--accent);
 }
 
 /* responsive */
@@ -222,7 +244,7 @@ h1, h2 {
 <!-- O MNĚ -->
 <section class="container">
     <div class="profile">
-        <a href="#img-prof"><img src="ivo-strnad-obkladac.jpeg" alt="Ivo Strnad – obkladač"></a>
+        <img src="ivo-strnad-obkladac.jpeg">
         <div>
             <div class="claim">30 let praxe</div>
             <p>
@@ -231,11 +253,11 @@ h1, h2 {
                 tak, jako bych ji dělal pro sebe doma. Pracuji samostatně, bez
                 prostředníků, nabízím férové ceny a přímou domluvu.
             </p>
-              <div class="usp">
-        <div>✔️ Dlouholetá praxe a zkušenosti</div>
-        <div>✔️ Pečlivé provedení bez kompromisů</div>
-        <div>✔️ Přímá domluva a férové ceny</div>
-    </div>
+            <div class="usp">
+                <div>✔️ Dlouholetá praxe a zkušenosti</div>
+                <div>✔️ Pečlivé provedení bez kompromisů</div>
+                <div>✔️ Přímá domluva a férové ceny</div>
+            </div>
         </div>
     </div>
 </section>
@@ -257,9 +279,9 @@ h1, h2 {
     <p>Ukázka jedné z koupelen, které jsem v poslední době realizoval.</p>
 
     <div class="gallery">
-        <a href="#img2"><img src="koupelna-2.jpeg" alt="Detail obkladů"></a>
-        <a href="#img1"><img src="koupelna-1.jpeg" alt="Rekonstrukce koupelny"></a>
-        <a href="#img3"><img src="koupelna-3.jpeg" alt="Pokládka dlažby"></a>
+        <img src="koupelna-2.jpeg">
+        <img src="koupelna-1.jpeg">
+        <img src="koupelna-3.jpeg">
     </div>
 </section>
 
@@ -274,12 +296,12 @@ h1, h2 {
 </p>
 
     <div class="gallery">
-        <a href="#ref2"><img src="reference-2.jpg" alt="Detail obkladů v koupelně"></a>
-        <a href="#ref3"><img src="reference-3.jpg" alt="Obklady WC"></a>
-        <a href="#ref5"><img src="reference-5.jpg" alt="Sprchový kout"></a>
-        <a href="#ref4"><img src="reference-4.jpg" alt="Obklady WC – realizace"></a>
-        <a href="#img4"><img src="koupelna-4.jpeg" alt="Hotová realizace"></a>
-        <a href="#ref1"><img src="reference-1.jpg" alt="Detail obkladů v kuchyni"></a>
+        <img src="reference-2.jpg">
+        <img src="reference-3.jpg">
+        <img src="reference-5.jpg">
+        <img src="reference-4.jpg">
+        <img src="koupelna-4.jpeg">
+        <img src="reference-1.jpg">
     </div>
 
     <div class="references">
@@ -346,7 +368,6 @@ h1, h2 {
     <div class="contact-details">
         <p>📞 <strong>Telefon:</strong> <a href="tel:+420723145168">+420 723 145 168</a></p>
         <p>✉️ <strong>E-mail:</strong> <a href="mailto:ivostrnad@post.cz">ivostrnad@post.cz</a></p>
-    
     </div>
 </section>
 
@@ -355,25 +376,71 @@ h1, h2 {
 </footer>
 
 <!-- LIGHTBOX -->
-<div id="img-prof" class="lightbox"><a href="#"><img src="ivo-strnad-obkladac.jpeg"></a></div>
-<div id="img1" class="lightbox"><a href="#"><img src="koupelna-1.jpeg"></a></div>
-<div id="img2" class="lightbox"><a href="#"><img src="koupelna-2.jpeg"></a></div>
-<div id="img3" class="lightbox"><a href="#"><img src="koupelna-3.jpeg"></a></div>
-<div id="img4" class="lightbox"><a href="#"><img src="koupelna-4.jpeg"></a></div>
-<div id="ref1" class="lightbox"><a href="#"><img src="reference-1.jpg"></a></div>
-<div id="ref2" class="lightbox"><a href="#"><img src="reference-2.jpg"></a></div>
-<div id="ref3" class="lightbox"><a href="#"><img src="reference-3.jpg"></a></div>
-<div id="ref4" class="lightbox"><a href="#"><img src="reference-4.jpg"></a></div>
-<div id="ref5" class="lightbox"><a href="#"><img src="reference-5.jpg"></a></div>
+<div class="lightbox" id="lightbox">
+    <span class="lightbox-arrow left">&#10094;</span>
+    <img src="">
+    <span class="lightbox-arrow right">&#10095;</span>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = lightbox.querySelector("img");
+    const images = Array.from(document.querySelectorAll(".gallery img, .profile img"));
+
+    let currentIndex = 0;
+    let slideshow = null;
+
+    function show(index) {
+        currentIndex = index;
+        lightboxImg.src = images[index].src;
+        lightbox.classList.add("active");
+    }
+
+    function next() {
+        currentIndex = (currentIndex + 1) % images.length;
+        lightboxImg.src = images[currentIndex].src;
+    }
+
+    function prev() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        lightboxImg.src = images[currentIndex].src;
+    }
+
+    images.forEach((img, i) => {
+        img.addEventListener("click", () => show(i));
+    });
+
+    lightbox.querySelector(".right").onclick = e => { e.stopPropagation(); next(); };
+    lightbox.querySelector(".left").onclick = e => { e.stopPropagation(); prev(); };
+
+    document.addEventListener("keydown", e => {
+        if (!lightbox.classList.contains("active")) return;
+        if (e.key === "ArrowRight") next();
+        if (e.key === "ArrowLeft") prev();
+        if (e.key === "Escape") close();
+    });
+
+    function close() {
+        lightbox.classList.remove("active");
+        clearInterval(slideshow);
+    }
+
+    lightbox.onclick = close;
+
+    lightboxImg.ondblclick = e => {
+        e.stopPropagation();
+        if (slideshow) {
+            clearInterval(slideshow);
+            slideshow = null;
+        } else {
+            slideshow = setInterval(next, 3000);
+        }
+    };
+
+});
+</script>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
