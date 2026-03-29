@@ -152,6 +152,7 @@ h1, h2 { color: var(--primary); }
     display: none;
     justify-content: center;
     align-items: center;
+    z-index: 9999;
 }
 
 .lightbox.active { display: flex; }
@@ -161,7 +162,6 @@ h1, h2 { color: var(--primary); }
     max-height: 85%;
 }
 
-/* ARROWS */
 .lightbox-arrow {
     position: absolute;
     top: 50%;
@@ -181,9 +181,7 @@ h1, h2 { color: var(--primary); }
     padding: 70px 20px;
 }
 
-.contact a {
-    color: white;
-}
+.contact a { color: white; }
 
 /* RESPONSIVE */
 @media (max-width: 780px) {
@@ -199,9 +197,12 @@ h1, h2 { color: var(--primary); }
 
 <!-- HERO -->
 <section class="hero">
-    <h1>Profesionální obkladačské práce</h1>
-    <p>Více než 30 let zkušeností s obklady a dlažbou.</p>
-    <a href="tel:+420723145168">📞 Zavolat</a>
+<h1>Profesionální obkladačské práce</h1>
+<p>
+Více než 30 let zkušeností s obklady a dlažbou.<br>
+Precizní práce, férové jednání a spokojený zákazník.
+</p>
+<a href="tel:+420723145168">📞 Zavolat</a>
 </section>
 
 <!-- O MNĚ -->
@@ -210,8 +211,10 @@ h1, h2 { color: var(--primary); }
 <img src="ivo-strnad-obkladac.jpeg">
 <div>
 <div class="claim">30 let praxe</div>
-<p>Jmenuji se Ivo Strnad...</p>
-
+<p>
+Jmenuji se <strong>Ivo Strnad</strong> a obkladačským pracím se
+věnuji více než <strong>30 let</strong>.
+</p>
 <div class="usp">
 <div>✔️ Dlouholetá praxe</div>
 <div>✔️ Pečlivé provedení</div>
@@ -225,9 +228,21 @@ h1, h2 { color: var(--primary); }
 <section class="container">
 <h2>Co nabízím</h2>
 <div class="cards">
-<div class="card">Obklady koupelen</div>
-<div class="card">Kuchyně</div>
-<div class="card">Dlažby</div>
+<div class="card">Obklady a dlažby koupelen</div>
+<div class="card">Obklady kuchyní</div>
+<div class="card">Pokládka dlažby</div>
+<div class="card">Poradenství</div>
+</div>
+</section>
+
+<!-- GALERIE -->
+<section class="container">
+<h2>Ukázka realizace moderní koupelny v Jablonci nad Nisou</h2>
+
+<div class="gallery">
+<img src="koupelna-2.jpeg">
+<img src="koupelna-1.jpeg">
+<img src="koupelna-3.jpeg">
 </div>
 </section>
 
@@ -235,14 +250,19 @@ h1, h2 { color: var(--primary); }
 <section class="container">
 <h2>Další realizace a reference</h2>
 
+<p>
+Níže najdete výběr dalších realizovaných zakázek z poslední doby.
+Jedná se o reálné práce u zákazníků.
+</p>
+
 <!-- TOP -->
 <div class="gallery">
-<img src="reference-11.jpg">
+<img src="reference-6.jpg">
 <img src="reference-7.jpg">
 <img src="reference-8.jpg">
 <img src="reference-9.jpg">
 <img src="reference-10.jpg">
-<img src="reference-6.jpg">
+<img src="reference-11.jpg">
 </div>
 
 <div style="text-align:center;margin-top:30px;">
@@ -260,7 +280,31 @@ Zobrazit další realizace
 <img src="reference-3.jpg">
 </div>
 </div>
+
+<!-- REFERENCE -->
+<div class="references">
+<div class="reference-box">„Pečlivá práce…“</div>
+<div class="reference-box">„Maximální spokojenost…“</div>
+</div>
+
 </section>
+
+<!-- MAPA -->
+<section class="container">
+<h2>Kde pracuji</h2>
+<iframe src="https://www.google.com/maps?q=Jablonec+nad+Nisou&z=8&output=embed"
+width="100%" height="380"></iframe>
+</section>
+
+<!-- KONTAKT -->
+<section class="contact">
+<h2>Kontakt</h2>
+<a href="tel:+420723145168">📞 Zavolat</a>
+</section>
+
+<footer>
+&copy; 2025 Ivo Strnad
+</footer>
 
 <!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox">
@@ -270,32 +314,19 @@ Zobrazit další realizace
 </div>
 
 <script>
-const images = document.querySelectorAll(".gallery img");
-const lightbox = document.getElementById("lightbox");
-const img = lightbox.querySelector("img");
-let i = 0;
+const imgs = document.querySelectorAll(".gallery img");
+const lb = document.getElementById("lightbox");
+const lbImg = lb.querySelector("img");
+let i=0;
 
-images.forEach((el, index)=>{
-el.onclick=()=>{
-i=index;
-img.src=el.src;
-lightbox.classList.add("active");
-}
+imgs.forEach((img,index)=>{
+img.onclick=()=>{i=index;lbImg.src=img.src;lb.classList.add("active");}
 });
 
-document.querySelector(".right").onclick=e=>{
-e.stopPropagation();
-i=(i+1)%images.length;
-img.src=images[i].src;
-};
+document.querySelector(".right").onclick=e=>{e.stopPropagation();i=(i+1)%imgs.length;lbImg.src=imgs[i].src;}
+document.querySelector(".left").onclick=e=>{e.stopPropagation();i=(i-1+imgs.length)%imgs.length;lbImg.src=imgs[i].src;}
 
-document.querySelector(".left").onclick=e=>{
-e.stopPropagation();
-i=(i-1+images.length)%images.length;
-img.src=images[i].src;
-};
-
-lightbox.onclick=()=>lightbox.classList.remove("active");
+lb.onclick=()=>lb.classList.remove("active");
 
 function toggleGallery(){
 const g=document.getElementById("moreGallery");
