@@ -15,7 +15,6 @@
     --text: #333;
 }
 
-/* základní */
 body {
     margin: 0;
     font-family: "Segoe UI", Roboto, Arial, sans-serif;
@@ -24,9 +23,7 @@ body {
     line-height: 1.7;
 }
 
-h1, h2 {
-    color: var(--primary);
-}
+h1, h2 { color: var(--primary); }
 
 .container {
     max-width: 1100px;
@@ -34,7 +31,7 @@ h1, h2 {
     padding: 60px 20px;
 }
 
-/* hero */
+/* HERO */
 .hero {
     background:
         linear-gradient(rgba(31,58,95,0.75), rgba(31,58,95,0.75)),
@@ -47,7 +44,7 @@ h1, h2 {
 .hero h1 {
     font-size: 38px;
     margin-bottom: 12px;
-    color: #ffffff !important;
+    color: #fff !important;
 }
 
 .hero p {
@@ -56,33 +53,20 @@ h1, h2 {
     margin: 0 auto 25px;
 }
 
-/* USP */
-.usp {
-    margin: 25px auto;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
-    font-size: 18px;
-}
-
-/* tlačítko */
 .hero a {
     background: var(--accent);
     color: #000;
     padding: 14px 32px;
     border-radius: 35px;
-    font-size: 18px;
     font-weight: bold;
     text-decoration: none;
 }
 
-/* profil */
+/* PROFIL */
 .profile {
     display: grid;
     grid-template-columns: 260px 1fr;
     gap: 35px;
-    align-items: start;
 }
 
 .profile img {
@@ -91,7 +75,6 @@ h1, h2 {
     cursor: pointer;
 }
 
-/* claim */
 .claim {
     display: inline-block;
     background: var(--accent);
@@ -100,12 +83,19 @@ h1, h2 {
     margin-bottom: 12px;
 }
 
-/* služby */
+/* USP */
+.usp {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* SLUŽBY */
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 22px;
-    margin-top: 15px;
 }
 
 .card {
@@ -115,7 +105,7 @@ h1, h2 {
     box-shadow: 0 6px 18px rgba(0,0,0,0.06);
 }
 
-/* galerie */
+/* GALERIE */
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
@@ -129,7 +119,17 @@ h1, h2 {
     cursor: pointer;
 }
 
-/* reference */
+/* BUTTON */
+.btn-more {
+    background: var(--accent);
+    padding: 14px 28px;
+    border-radius: 30px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+/* REFERENCE */
 .references {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -140,43 +140,8 @@ h1, h2 {
 .reference-box {
     background: #fff;
     border-left: 5px solid var(--accent);
-    padding: 22px 26px;
+    padding: 22px;
     border-radius: 10px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.06);
-}
-
-.reference-text {
-    font-style: italic;
-}
-
-.reference-author {
-    margin-top: 10px;
-    font-weight: bold;
-    color: var(--primary);
-}
-
-/* kontakt */
-.contact {
-    background: var(--primary);
-    color: #fff;
-    text-align: center;
-    padding: 70px 20px;
-}
-
-.contact a.main-call {
-    display: inline-block;
-    margin: 22px 0;
-    background: var(--accent);
-    color: #000;
-    padding: 14px 30px;
-    border-radius: 35px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.contact-details a {
-    color: #fff;
-    text-decoration: underline;
 }
 
 /* LIGHTBOX */
@@ -187,38 +152,40 @@ h1, h2 {
     display: none;
     justify-content: center;
     align-items: center;
-    z-index: 9999;
 }
 
-.lightbox.active {
-    display: flex;
-}
+.lightbox.active { display: flex; }
 
 .lightbox img {
     max-width: 90%;
     max-height: 85%;
-    border-radius: 10px;
 }
 
-/* šipky */
+/* ARROWS */
 .lightbox-arrow {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
     font-size: 40px;
     color: white;
     cursor: pointer;
-    padding: 15px;
 }
 
-.lightbox-arrow.left { left: 20px; }
-.lightbox-arrow.right { right: 20px; }
+.left { left: 20px; }
+.right { right: 20px; }
 
-.lightbox-arrow:hover {
-    color: var(--accent);
+/* KONTAKT */
+.contact {
+    background: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 70px 20px;
 }
 
-/* responsive */
+.contact a {
+    color: white;
+}
+
+/* RESPONSIVE */
 @media (max-width: 780px) {
     .profile {
         grid-template-columns: 1fr;
@@ -233,226 +200,107 @@ h1, h2 {
 <!-- HERO -->
 <section class="hero">
     <h1>Profesionální obkladačské práce</h1>
-    <p>
-        Více než 30 let zkušeností s obklady a dlažbou.<br>
-        Precizní práce, férové jednání a spokojený zákazník.
-    </p>
-
+    <p>Více než 30 let zkušeností s obklady a dlažbou.</p>
     <a href="tel:+420723145168">📞 Zavolat</a>
 </section>
 
 <!-- O MNĚ -->
 <section class="container">
-    <div class="profile">
-        <img src="ivo-strnad-obkladac.jpeg">
-        <div>
-            <div class="claim">30 let praxe</div>
-            <p>
-                Jmenuji se <strong>Ivo Strnad</strong> a obkladačským pracím se
-                věnuji více než <strong>30 let</strong>. Každou zakázku provádím
-                tak, jako bych ji dělal pro sebe doma. Pracuji samostatně, bez
-                prostředníků, nabízím férové ceny a přímou domluvu.
-            </p>
-            <div class="usp">
-                <div>✔️ Dlouholetá praxe a zkušenosti</div>
-                <div>✔️ Pečlivé provedení bez kompromisů</div>
-                <div>✔️ Přímá domluva a férové ceny</div>
-            </div>
-        </div>
-    </div>
+<div class="profile">
+<img src="ivo-strnad-obkladac.jpeg">
+<div>
+<div class="claim">30 let praxe</div>
+<p>Jmenuji se Ivo Strnad...</p>
+
+<div class="usp">
+<div>✔️ Dlouholetá praxe</div>
+<div>✔️ Pečlivé provedení</div>
+<div>✔️ Férové ceny</div>
+</div>
+</div>
+</div>
 </section>
 
 <!-- SLUŽBY -->
 <section class="container">
-    <h2>Co nabízím</h2>
-    <div class="cards">
-        <div class="card">Obklady a dlažby koupelen</div>
-        <div class="card">Obklady kuchyní a kuchyňských koutů</div>
-        <div class="card">Pokládka dlažby (interiér i exteriér)</div>
-        <div class="card">Poradenství při výběru materiálů</div>
-    </div>
-</section>
-
-<!-- GALERIE -->
-<section class="container">
-    <h2>Ukázka realizace moderní koupelny v Jablonci nad Nisou</h2>
-    <p>Ukázka jedné z koupelen, které jsem v poslední době realizoval.</p>
-
-    <div class="gallery">
-        <img src="koupelna-2.jpeg">
-        <img src="koupelna-1.jpeg">
-        <img src="koupelna-3.jpeg">
-    </div>
+<h2>Co nabízím</h2>
+<div class="cards">
+<div class="card">Obklady koupelen</div>
+<div class="card">Kuchyně</div>
+<div class="card">Dlažby</div>
+</div>
 </section>
 
 <!-- DALŠÍ REALIZACE -->
 <section class="container">
-    <h2>Další realizace a reference</h2>
-<p>
-    Níže najdete výběr dalších realizovaných zakázek z poslední doby.
-    Jedná se o reálné práce u zákazníků – kuchyně, koupelny, WC
-    a sprchové kouty. U každé zakázky kladu důraz na detail,
-    přesné provedení a dlouhou životnost.
-</p>
+<h2>Další realizace a reference</h2>
 
+<!-- TOP -->
 <div class="gallery">
-
-    <!-- NOVÉ FOTKY NAHOŘE -->
-    <img src="reference-6.jpg">
-    <img src="reference-7.jpg">
-    <img src="reference-8.jpg">
-    <img src="reference-9.jpg">
-    <img src="reference-10.jpg">
-    <img src="reference-11.jpg">
-    <img src="reference-12.jpg">
-    <img src="reference-13.jpg">
-
-    <!-- PŮVODNÍ FOTKY -->
-    <img src="reference-2.jpg">
-    <img src="reference-3.jpg">
-    <img src="reference-5.jpg">
-    <img src="reference-4.jpg">
-    <img src="koupelna-4.jpeg">
-    <img src="reference-1.jpg">
-
+<img src="reference-6.jpg">
+<img src="reference-7.jpg">
+<img src="reference-8.jpg">
+<img src="reference-9.jpg">
+<img src="reference-10.jpg">
+<img src="reference-11.jpg">
 </div>
 
-    <div class="references">
-        <div class="reference-box">
-            <div class="reference-text">
-                „Pečlivá práce, čisté provedení a férová cena.“
-            </div>
-            <div class="reference-author">
-                – Jakub S., Jablonec nad Nisou
-            </div>
-        </div>
-        <div class="reference-box">
-            <div class="reference-text">
-                „S obklady v kuchyni jsme byli maximálně spokojeni.
-                Precizní práce a dodržený rozpočet.“
-            </div>
-            <div class="reference-author">
-                – Alena J., Bedřichov
-            </div>
-        </div>
-        <div class="reference-box">
-            <div class="reference-text">
-                „Dlažba v chodbě je položená perfektně.
-                Vše proběhlo podle domluvy a v dohodnutém termínu.“
-            </div>
-            <div class="reference-author">
-                – Anna K., Bratříkov
-            </div>
-        </div>
-    </div>
+<div style="text-align:center;margin-top:30px;">
+<button onclick="toggleGallery()" class="btn-more">
+Zobrazit další realizace
+</button>
+</div>
+
+<div id="moreGallery" style="display:none;">
+<div class="gallery">
+<img src="reference-12.jpg">
+<img src="reference-13.jpg">
+<img src="reference-1.jpg">
+<img src="reference-2.jpg">
+<img src="reference-3.jpg">
+</div>
+</div>
 </section>
-
-<!-- KDE PRACUJI -->
-<section class="container">
-    <h2>Kde pracuji</h2>
-    <p>
-        Obkladačské a dlaždičské práce provádím především v
-        <strong>Libereckém kraji</strong>. Nejčastěji pracuji v lokalitách
-        <strong>Jablonec nad Nisou, Liberec, Turnov, Tanvald a okolí</strong>.
-        Po domluvě realizuji zakázky i v dalších městech až po <strong>Prahu</strong>.
-    </p>
-
-    <div style="margin-top:30px;border-radius:12px;overflow:hidden;">
-        <iframe
-            src="https://www.google.com/maps?q=Jablonec+nad+Nisou&z=8&output=embed"
-            width="100%"
-            height="380"
-            style="border:0;"
-            loading="lazy">
-        </iframe>
-    </div>
-</section>
-
-<!-- KONTAKT -->
-<section class="contact">
-    <h2>Kontakt</h2>
-    <p>
-        Máte projekt? Potřebujete řešit obklady nebo dlažbu?<br>
-        Zavolejte mi nebo napište a rád proberu vaše představy a cenovou nabídku.
-    </p>
-
-    <a class="main-call" href="tel:+420723145168">📞 Zavolat</a>
-
-    <div class="contact-details">
-        <p>📞 <strong>Telefon:</strong> <a href="tel:+420723145168">+420 723 145 168</a></p>
-        <p>✉️ <strong>E-mail:</strong> <a href="mailto:ivostrnad@post.cz">ivostrnad@post.cz</a></p>
-    </div>
-</section>
-
-<footer>
-    &copy; 2025 Ivo Strnad – obkladačské práce | Liberecký kraj
-</footer>
 
 <!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox">
-    <span class="lightbox-arrow left">&#10094;</span>
-    <img src="">
-    <span class="lightbox-arrow right">&#10095;</span>
+<span class="lightbox-arrow left">&#10094;</span>
+<img src="">
+<span class="lightbox-arrow right">&#10095;</span>
 </div>
 
 <script>
-document.addEventListener("DOMContentLoaded", function () {
+const images = document.querySelectorAll(".gallery img");
+const lightbox = document.getElementById("lightbox");
+const img = lightbox.querySelector("img");
+let i = 0;
 
-    const lightbox = document.getElementById("lightbox");
-    const lightboxImg = lightbox.querySelector("img");
-    const images = Array.from(document.querySelectorAll(".gallery img, .profile img"));
-
-    let currentIndex = 0;
-    let slideshow = null;
-
-    function show(index) {
-        currentIndex = index;
-        lightboxImg.src = images[index].src;
-        lightbox.classList.add("active");
-    }
-
-    function next() {
-        currentIndex = (currentIndex + 1) % images.length;
-        lightboxImg.src = images[currentIndex].src;
-    }
-
-    function prev() {
-        currentIndex = (currentIndex - 1 + images.length) % images.length;
-        lightboxImg.src = images[currentIndex].src;
-    }
-
-    images.forEach((img, i) => {
-        img.addEventListener("click", () => show(i));
-    });
-
-    lightbox.querySelector(".right").onclick = e => { e.stopPropagation(); next(); };
-    lightbox.querySelector(".left").onclick = e => { e.stopPropagation(); prev(); };
-
-    document.addEventListener("keydown", e => {
-        if (!lightbox.classList.contains("active")) return;
-        if (e.key === "ArrowRight") next();
-        if (e.key === "ArrowLeft") prev();
-        if (e.key === "Escape") close();
-    });
-
-    function close() {
-        lightbox.classList.remove("active");
-        clearInterval(slideshow);
-    }
-
-    lightbox.onclick = close;
-
-    lightboxImg.ondblclick = e => {
-        e.stopPropagation();
-        if (slideshow) {
-            clearInterval(slideshow);
-            slideshow = null;
-        } else {
-            slideshow = setInterval(next, 3000);
-        }
-    };
-
+images.forEach((el, index)=>{
+el.onclick=()=>{
+i=index;
+img.src=el.src;
+lightbox.classList.add("active");
+}
 });
+
+document.querySelector(".right").onclick=e=>{
+e.stopPropagation();
+i=(i+1)%images.length;
+img.src=images[i].src;
+};
+
+document.querySelector(".left").onclick=e=>{
+e.stopPropagation();
+i=(i-1+images.length)%images.length;
+img.src=images[i].src;
+};
+
+lightbox.onclick=()=>lightbox.classList.remove("active");
+
+function toggleGallery(){
+const g=document.getElementById("moreGallery");
+g.style.display=g.style.display==="none"?"block":"none";
+}
 </script>
 
 </body>
