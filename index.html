@@ -142,6 +142,17 @@ h1, h2 { color: var(--primary); }
     border-left: 5px solid var(--accent);
     padding: 22px;
     border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.06);
+}
+
+.reference-text {
+    font-style: italic;
+}
+
+.reference-author {
+    margin-top: 10px;
+    font-weight: bold;
+    color: var(--primary);
 }
 
 /* LIGHTBOX */
@@ -181,7 +192,10 @@ h1, h2 { color: var(--primary); }
     padding: 70px 20px;
 }
 
-.contact a { color: white; }
+.contact a {
+    color: white;
+    text-decoration: underline;
+}
 
 /* RESPONSIVE */
 @media (max-width: 780px) {
@@ -197,12 +211,12 @@ h1, h2 { color: var(--primary); }
 
 <!-- HERO -->
 <section class="hero">
-<h1>Profesionální obkladačské práce</h1>
-<p>
-Více než 30 let zkušeností s obklady a dlažbou.<br>
-Precizní práce, férové jednání a spokojený zákazník.
-</p>
-<a href="tel:+420723145168">📞 Zavolat</a>
+    <h1>Profesionální obkladačské práce</h1>
+    <p>
+        Více než 30 let zkušeností s obklady a dlažbou.<br>
+        Precizní práce, férové jednání a spokojený zákazník.
+    </p>
+    <a href="tel:+420723145168">📞 Zavolat</a>
 </section>
 
 <!-- O MNĚ -->
@@ -238,7 +252,6 @@ věnuji více než <strong>30 let</strong>.
 <!-- GALERIE -->
 <section class="container">
 <h2>Ukázka realizace moderní koupelny v Jablonci nad Nisou</h2>
-
 <div class="gallery">
 <img src="koupelna-2.jpeg">
 <img src="koupelna-1.jpeg">
@@ -252,10 +265,11 @@ věnuji více než <strong>30 let</strong>.
 
 <p>
 Níže najdete výběr dalších realizovaných zakázek z poslední doby.
-Jedná se o reálné práce u zákazníků.
+Jedná se o reálné práce u zákazníků – kuchyně, koupelny, WC
+a sprchové kouty. U každé zakázky kladu důraz na detail,
+přesné provedení a dlouhou životnost.
 </p>
 
-<!-- TOP -->
 <div class="gallery">
 <img src="reference-6.jpg">
 <img src="reference-7.jpg">
@@ -275,16 +289,28 @@ Zobrazit další realizace
 <div class="gallery">
 <img src="reference-12.jpg">
 <img src="reference-13.jpg">
-<img src="reference-1.jpg">
 <img src="reference-2.jpg">
 <img src="reference-3.jpg">
+<img src="reference-5.jpg">
+<img src="reference-4.jpg">
+<img src="koupelna-4.jpeg">
+<img src="reference-1.jpg">
 </div>
 </div>
 
-<!-- REFERENCE -->
 <div class="references">
-<div class="reference-box">„Pečlivá práce…“</div>
-<div class="reference-box">„Maximální spokojenost…“</div>
+<div class="reference-box">
+<div class="reference-text">„Pečlivá práce, čisté provedení a férová cena.“</div>
+<div class="reference-author">– Jakub S., Jablonec nad Nisou</div>
+</div>
+<div class="reference-box">
+<div class="reference-text">„S obklady v kuchyni jsme byli maximálně spokojeni.“</div>
+<div class="reference-author">– Alena J., Bedřichov</div>
+</div>
+<div class="reference-box">
+<div class="reference-text">„Dlažba v chodbě je položená perfektně.“</div>
+<div class="reference-author">– Anna K., Bratříkov</div>
+</div>
 </div>
 
 </section>
@@ -292,18 +318,32 @@ Zobrazit další realizace
 <!-- MAPA -->
 <section class="container">
 <h2>Kde pracuji</h2>
+<p>
+Obkladačské práce provádím především v Libereckém kraji.
+</p>
+
 <iframe src="https://www.google.com/maps?q=Jablonec+nad+Nisou&z=8&output=embed"
-width="100%" height="380"></iframe>
+width="100%" height="380" style="border:0;"></iframe>
 </section>
 
 <!-- KONTAKT -->
 <section class="contact">
 <h2>Kontakt</h2>
+
+<p>
+Máte projekt? Potřebujete řešit obklady nebo dlažbu?<br>
+Zavolejte mi nebo napište a rád proberu vaše představy a cenovou nabídku.
+</p>
+
 <a href="tel:+420723145168">📞 Zavolat</a>
+
+<p>📞 +420 723 145 168</p>
+<p>✉️ ivostrnad@post.cz</p>
+
 </section>
 
 <footer>
-&copy; 2025 Ivo Strnad
+&copy; 2025 Ivo Strnad – obkladačské práce | Liberecký kraj
 </footer>
 
 <!-- LIGHTBOX -->
@@ -314,7 +354,7 @@ width="100%" height="380"></iframe>
 </div>
 
 <script>
-const imgs = document.querySelectorAll(".gallery img");
+const imgs = document.querySelectorAll(".gallery img, .profile img");
 const lb = document.getElementById("lightbox");
 const lbImg = lb.querySelector("img");
 let i=0;
