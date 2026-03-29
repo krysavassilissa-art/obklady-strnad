@@ -185,11 +185,17 @@ h1, h2 { color: var(--primary); }
 .right { right: 20px; }
 
 /* KONTAKT */
-.contact {
-    background: var(--primary);
-    color: white;
-    text-align: center;
-    padding: 70px 20px;
+.contact a.main-call {
+    display: inline-block;
+    margin: 25px 0;
+    background: var(--accent);
+    color: #000;
+    padding: 16px 34px;
+    border-radius: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+}
 }
 
 .contact a {
@@ -335,7 +341,7 @@ Máte projekt? Potřebujete řešit obklady nebo dlažbu?<br>
 Zavolejte mi nebo napište a rád proberu vaše představy a cenovou nabídku.
 </p>
 
-<a href="tel:+420723145168">📞 Zavolat</a>
+<a href="tel:+420723145168" class="main-call">📞 Zavolat</a>
 
 <p>📞 +420 723 145 168</p>
 <p>✉️ ivostrnad@post.cz</p>
